@@ -45,7 +45,7 @@ def find_neighbours(database_array, search_indexes, new_point, k_neighbors):
     # Appending k nearest neighbours from stack in ascending order
     neighbors = []
     for _ in range(k_neighbors):
-       
+
        distance, index = hq.heappop(distances)
        neighbors.append((distance, index))
 
@@ -60,7 +60,7 @@ def choose_next_city(current_city, cities, search_indexes, k_neighbors):
 
     # Find nearest neighbor (excluding current city)
     neighbors = find_neighbours(cities, search_indexes, cities[current_city], k_neighbors + 1)[1:]  # Skip nearest (current) city
-    
+
     for i in neighbors:
         nb_distance = i[0]
         nb_index = i[1]
@@ -78,7 +78,7 @@ def choose_next_city(current_city, cities, search_indexes, k_neighbors):
 def choose_knn_route(cities, start):
     distance_traveled = 0
     visiting_order = [start] # Stores indexes by visiting order
-    unvisited_cities = [] # Stores indexes of unvisited cities 
+    unvisited_cities = [] # Stores indexes of unvisited cities
 
     for i in range(len(cities)):
         unvisited_cities.append(i)
@@ -96,5 +96,3 @@ def choose_knn_route(cities, start):
         print(unvisited_cities)
 
     return visiting_order, distance_traveled
-
-   

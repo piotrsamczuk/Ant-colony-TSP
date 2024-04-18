@@ -104,10 +104,10 @@ def calculate_distance(path, distance_matrix):
 
 
 # Przykładowe użycie
-num_vertices = 30  # liczba wierzchołków
-distance_matrix = generate_distance_matrix(num_vertices)
-print("Macierz odległości:")
-print(distance_matrix)
+#num_vertices = 30  # liczba wierzchołków
+#distance_matrix = generate_distance_matrix(num_vertices)
+#print("Macierz odległości:")
+#print(distance_matrix)
 
 
 #permutation, distance = solve_tsp_dynamic_programming(distance_matrix)
@@ -119,8 +119,8 @@ print(distance_matrix)
 #print("Długość najlepszej trasy:", distance1)
 
 
-num_ants = 10
-num_iterations = 100
-best_path, best_distance = ant_colony_optimization(distance_matrix, num_ants, num_iterations)
-print("Najlepsza trasa znaleziona przez algorytm mrówkowy:", best_path)
-print("Długość najlepszej trasy ACO:", best_distance)
+#num_ants = 10
+#num_iterations = 100
+#best_path, best_distance = ant_colony_optimization(distance_matrix, num_ants, num_iterations)
+#print("Najlepsza trasa znaleziona przez algorytm mrówkowy:", best_path)
+#print("Długość najlepszej trasy ACO:", best_distance)
