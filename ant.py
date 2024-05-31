@@ -24,7 +24,7 @@ def generate_distance_matrix(num_vertices):
 # Algorytm mrówkowy
 
 #Alfa- waga dla feromonów Beta- Waga dla heurystyki.
-def ant_colony_optimization(distance_matrix, num_ants, num_iterations, evaporation_rate=0.5, alpha=4, beta=7): #dane z książki, jeszcze do testów
+def ant_colony_optimization(distance_matrix, num_ants, num_iterations, evaporation_rate, alpha, beta): #dane z książki, jeszcze do testów
     num_vertices = len(distance_matrix)
     pheromone_matrix = np.ones((num_vertices, num_vertices))  # macierz feromonów jako same jedynki
     best_path = None
@@ -37,7 +37,8 @@ def ant_colony_optimization(distance_matrix, num_ants, num_iterations, evaporati
 
         # Przechodzenie każdej mrówki
         for _ in range(num_ants):
-            current_vertex = np.random.randint(num_vertices)  # początkowy wierzchołek dla mruwki randomizowany
+            #current_vertex = np.random.randint(num_vertices)  # początkowy wierzchołek dla mruwki randomizowany
+            current_vertex = 0
             visited_vertices = [current_vertex]
             total_distance = 0
 
