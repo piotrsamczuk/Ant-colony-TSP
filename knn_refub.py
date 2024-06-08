@@ -21,7 +21,3 @@ def nearest_neighbor(distance_matrix):
     total_distance += distance_matrix[path[-1]][0]  # Dodanie odległości powrotu do punktu początkowego
 
     return path, total_distance
-
-
-
-

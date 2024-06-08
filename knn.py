@@ -1,9 +1,9 @@
 """
     *KNN ALGORITHM CODE*
-    
+
 """
 
-### Imports ### 
+### Imports ###
 import numpy as np
 import heapq as hq
 
@@ -20,7 +20,7 @@ def calculate_distance(p1, p2):
         # Euclidean distance equation
         for i in range(len(p1)):
           distance += (p1[i] - p2[i])**2
-    
+
     return np.sqrt(distance)
 
 def find_neighbours(database_array, search_indexes, new_point, k_neighbors):
